@@ -58,9 +58,10 @@ if las_file:
 
 # Sidebar Navigation
 st.sidebar.title('Navigation')
+# options = st.sidebar.radio('Select a page:', 
+#     ['Home', 'Header Information', 'Data Information', 'Data Visualisation', 'Missing Data Visualisation'])
 options = st.sidebar.radio('Select a page:', 
-    ['Home', 'Header Information', 'Data Information', 'Data Visualisation', 'Missing Data Visualisation'])
-
+    ['Home', 'Header Information', 'Data Information', 'Data Visualisation'])
 if options == 'Home':
     home.home()
 elif options == 'Header Information':
@@ -69,5 +70,5 @@ elif options == 'Data Information':
     raw_data.raw_data(las_file, well_data)
 elif options == 'Data Visualisation':
     plotting.plot(las_file, well_data)
-elif options == 'Missing Data Visualisation':
-    missingdata.missing(las_file, well_data)
+# elif options == 'Missing Data Visualisation':
+#     missingdata.missing(las_file, well_data)

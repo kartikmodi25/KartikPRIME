@@ -12,7 +12,7 @@ def raw_data(las_file, well_data):
             st.write(f"   {curve.mnemonic} ({curve.unit}): {curve.descr}", unsafe_allow_html=True)
         st.write(f"<b>There are a total of: {count+1} curves present within this file</b>", unsafe_allow_html=True)
         
-        st.write('<b>Curve Statistics</b>', unsafe_allow_html=True)
-        st.write(well_data.describe())
+        # st.write('<b>Curve Statistics</b>', unsafe_allow_html=True)
+        # st.write(well_data.describe())
         st.write('<b>Raw Data Values</b>', unsafe_allow_html=True)
         st.dataframe(data=well_data)
